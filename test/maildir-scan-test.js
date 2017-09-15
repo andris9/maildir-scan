@@ -2,7 +2,7 @@
 
 const MaildirScan = require('../lib/maildir-scan');
 
-module.exports.test = test => {
+module.exports.recursiveFolderScan = test => {
     let scanner = new MaildirScan();
     scanner.recursiveFolderScan(__dirname + '/fixtures/box1/Maildir', false, 0, (err, output) => {
         test.ifError(err);
@@ -12,36 +12,25 @@ module.exports.test = test => {
                 path: '.Drafts',
                 dir: true,
                 children: [
-                    {
-                        name: 'courierimapacl',
-                        path: '.Drafts/courierimapacl',
-                        file: true
-                    },
+                    { name: 'courierimapacl', path: '.Drafts/courierimapacl', file: true },
                     { name: 'cur', path: '.Drafts/cur', dir: true, children: [] },
                     { name: 'new', path: '.Drafts/new', dir: true, children: [] },
                     { name: 'tmp', path: '.Drafts/tmp', dir: true, children: [] }
                 ]
             },
+            { name: '.DS_Store', path: '.DS_Store', file: true },
             {
                 name: '.R&AOQ-mpspost.T&AOQ-htis',
                 path: '.R&AOQ-mpspost.T&AOQ-htis',
                 dir: true,
                 children: [
-                    {
-                        name: 'courierimapacl',
-                        path: '.R&AOQ-mpspost.T&AOQ-htis/courierimapacl',
-                        file: true
-                    },
+                    { name: 'courierimapacl', path: '.R&AOQ-mpspost.T&AOQ-htis/courierimapacl', file: true },
                     {
                         name: 'courierimapkeywords',
                         path: '.R&AOQ-mpspost.T&AOQ-htis/courierimapkeywords',
                         dir: true,
                         children: [
-                            {
-                                name: ':list',
-                                path: '.R&AOQ-mpspost.T&AOQ-htis/courierimapkeywords/:list',
-                                file: true
-                            },
+                            { name: ':list', path: '.R&AOQ-mpspost.T&AOQ-htis/courierimapkeywords/:list', file: true },
                             {
                                 name: '.5017661.1505297645.M902486P6469V000000000000FC00I0000000000043284_2.ubuntu,S=7',
                                 path:
@@ -55,11 +44,7 @@ module.exports.test = test => {
                             }
                         ]
                     },
-                    {
-                        name: 'courierimapuiddb',
-                        path: '.R&AOQ-mpspost.T&AOQ-htis/courierimapuiddb',
-                        file: true
-                    },
+                    { name: 'courierimapuiddb', path: '.R&AOQ-mpspost.T&AOQ-htis/courierimapuiddb', file: true },
                     {
                         name: 'cur',
                         path: '.R&AOQ-mpspost.T&AOQ-htis/cur',
@@ -87,23 +72,9 @@ module.exports.test = test => {
                             }
                         ]
                     },
-                    {
-                        name: 'maildirfolder',
-                        path: '.R&AOQ-mpspost.T&AOQ-htis/maildirfolder',
-                        file: true
-                    },
-                    {
-                        name: 'new',
-                        path: '.R&AOQ-mpspost.T&AOQ-htis/new',
-                        dir: true,
-                        children: []
-                    },
-                    {
-                        name: 'tmp',
-                        path: '.R&AOQ-mpspost.T&AOQ-htis/tmp',
-                        dir: true,
-                        children: []
-                    }
+                    { name: 'maildirfolder', path: '.R&AOQ-mpspost.T&AOQ-htis/maildirfolder', file: true },
+                    { name: 'new', path: '.R&AOQ-mpspost.T&AOQ-htis/new', dir: true, children: [] },
+                    { name: 'tmp', path: '.R&AOQ-mpspost.T&AOQ-htis/tmp', dir: true, children: [] }
                 ]
             },
             {
@@ -111,11 +82,7 @@ module.exports.test = test => {
                 path: '.Sent',
                 dir: true,
                 children: [
-                    {
-                        name: 'courierimapacl',
-                        path: '.Sent/courierimapacl',
-                        file: true
-                    },
+                    { name: 'courierimapacl', path: '.Sent/courierimapacl', file: true },
                     { name: 'cur', path: '.Sent/cur', dir: true, children: [] },
                     { name: 'new', path: '.Sent/new', dir: true, children: [] },
                     { name: 'tmp', path: '.Sent/tmp', dir: true, children: [] }
@@ -126,11 +93,7 @@ module.exports.test = test => {
                 path: '.Templates',
                 dir: true,
                 children: [
-                    {
-                        name: 'courierimapacl',
-                        path: '.Templates/courierimapacl',
-                        file: true
-                    },
+                    { name: 'courierimapacl', path: '.Templates/courierimapacl', file: true },
                     { name: 'cur', path: '.Templates/cur', dir: true, children: [] },
                     { name: 'new', path: '.Templates/new', dir: true, children: [] },
                     { name: 'tmp', path: '.Templates/tmp', dir: true, children: [] }
@@ -141,11 +104,7 @@ module.exports.test = test => {
                 path: '.Trash',
                 dir: true,
                 children: [
-                    {
-                        name: 'courierimapacl',
-                        path: '.Trash/courierimapacl',
-                        file: true
-                    },
+                    { name: 'courierimapacl', path: '.Trash/courierimapacl', file: true },
                     { name: 'cur', path: '.Trash/cur', dir: true, children: [] },
                     { name: 'new', path: '.Trash/new', dir: true, children: [] },
                     { name: 'tmp', path: '.Trash/tmp', dir: true, children: [] }
@@ -155,25 +114,10 @@ module.exports.test = test => {
                 name: 'courierimaphieracl',
                 path: 'courierimaphieracl',
                 dir: true,
-                children: [
-                    {
-                        name: 'R&AOQ-mpspost',
-                        path: 'courierimaphieracl/R&AOQ-mpspost',
-                        file: true
-                    }
-                ]
+                children: [{ name: 'R&AOQ-mpspost', path: 'courierimaphieracl/R&AOQ-mpspost', file: true }]
             },
-            {
-                name: 'courierimapkeywords',
-                path: 'courierimapkeywords',
-                dir: true,
-                children: []
-            },
-            {
-                name: 'courierimapuiddb',
-                path: 'courierimapuiddb',
-                file: true
-            },
+            { name: 'courierimapkeywords', path: 'courierimapkeywords', dir: true, children: [] },
+            { name: 'courierimapuiddb', path: 'courierimapuiddb', file: true },
             {
                 name: 'cur',
                 path: 'cur',
@@ -186,14 +130,26 @@ module.exports.test = test => {
                     }
                 ]
             },
-            { name: 'new', path: 'new', dir: true, children: [] },
+            {
+                name: 'new',
+                path: 'new',
+                dir: true,
+                children: [
+                    { name: '.DS_Store', path: 'new/.DS_Store', file: true },
+                    {
+                        name: '1505297736.Z810083P6469V000000000000FC00I0000000000044B99_3.ubuntu,S=9',
+                        path: 'new/1505297736.Z810083P6469V000000000000FC00I0000000000044B99_3.ubuntu,S=9',
+                        file: true
+                    }
+                ]
+            },
             { name: 'tmp', path: 'tmp', dir: true, children: [] }
         ]);
         test.done();
     });
 };
 
-module.exports.test = test => {
+module.exports.scan = test => {
     let scanner = new MaildirScan();
     scanner.scan(__dirname + '/fixtures/box1/Maildir', (err, output) => {
         test.ifError(err);
@@ -208,9 +164,14 @@ module.exports.test = test => {
                         path: 'cur/1505297735.M810083P6469V000000000000FC00I0000000000044B99_3.ubuntu,S=9:2,',
                         time: 1505297735,
                         flags: []
+                    },
+                    {
+                        name: '1505297736.Z810083P6469V000000000000FC00I0000000000044B99_3.ubuntu,S=9',
+                        path: 'new/1505297736.Z810083P6469V000000000000FC00I0000000000044B99_3.ubuntu,S=9',
+                        time: 1505297736,
+                        flags: []
                     }
-                ],
-                maildir: true
+                ]
             },
             {
                 folder: ['Rämpspost', 'Tähtis'],
@@ -233,16 +194,15 @@ module.exports.test = test => {
                         name: '1505297645.M902486P6469V000000000000FC00I0000000000043284_2.ubuntu,S=7:2,F',
                         path: '.R&AOQ-mpspost.T&AOQ-htis/cur/1505297645.M902486P6469V000000000000FC00I0000000000043284_2.ubuntu,S=7:2,F',
                         time: 1505297645,
-                        flags: ['\\Flagged']
+                        flags: ['\\Flagged', 'gupi', 'jupi']
                     },
                     {
                         name: '1505298136.M631733P6523V000000000000FC00I000000000004796C_0.ubuntu,S=11:2,DFS',
                         path: '.R&AOQ-mpspost.T&AOQ-htis/cur/1505298136.M631733P6523V000000000000FC00I000000000004796C_0.ubuntu,S=11:2,DFS',
                         time: 1505298136,
-                        flags: ['\\Draft', '\\Flagged', '\\Seen']
+                        flags: ['\\Draft', '\\Flagged', '\\Seen', 'jupi', 'kupi', 'mupi']
                     }
-                ],
-                maildir: true
+                ]
             }
         ]);
         test.done();

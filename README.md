@@ -1,6 +1,6 @@
 # maildir-scan
 
-Finds messages from Maildir
+Finds messages from Maildir. Output is an array of folder objects that include an array of message objects. Actual message content is not loaded, this module is used for listing only. Tested on Courier based Maildir folders.
 
 ## Install
 
