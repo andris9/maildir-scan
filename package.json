@@ -1,6 +1,6 @@
 {
     "name": "maildir-scan",
-    "version": "1.0.1",
+    "version": "1.1.0",
     "description": "Scan maildir folder and output a list of messages",
     "main": "lib/maildir-scan.js",
     "scripts": {
@@ -17,6 +17,7 @@
     },
     "dependencies": {
         "grunt-contrib-nodeunit": "^1.0.0",
+        "mailparser": "^2.0.5",
         "utf7": "^1.0.2"
     }
 }

@@ -118,18 +118,7 @@ module.exports.recursiveFolderScan = test => {
             },
             { name: 'courierimapkeywords', path: 'courierimapkeywords', dir: true, children: [] },
             { name: 'courierimapuiddb', path: 'courierimapuiddb', file: true },
-            {
-                name: 'cur',
-                path: 'cur',
-                dir: true,
-                children: [
-                    {
-                        name: '1505297735.M810083P6469V000000000000FC00I0000000000044B99_3.ubuntu,S=9:2,',
-                        path: 'cur/1505297735.M810083P6469V000000000000FC00I0000000000044B99_3.ubuntu,S=9:2,',
-                        file: true
-                    }
-                ]
-            },
+            { name: 'cur', path: 'cur', dir: true, children: [{ name: 'random.name', path: 'cur/random.name', file: true }] },
             {
                 name: 'new',
                 path: 'new',
@@ -159,12 +148,7 @@ module.exports.scan = test => {
                 name: 'INBOX',
                 path: '.',
                 messages: [
-                    {
-                        name: '1505297735.M810083P6469V000000000000FC00I0000000000044B99_3.ubuntu,S=9:2,',
-                        path: 'cur/1505297735.M810083P6469V000000000000FC00I0000000000044B99_3.ubuntu,S=9:2,',
-                        time: 1505297735,
-                        flags: []
-                    },
+                    { name: 'random.name', path: 'cur/random.name', time: 1505991694, flags: [] },
                     {
                         name: '1505297736.Z810083P6469V000000000000FC00I0000000000044B99_3.ubuntu,S=9',
                         path: 'new/1505297736.Z810083P6469V000000000000FC00I0000000000044B99_3.ubuntu,S=9',
