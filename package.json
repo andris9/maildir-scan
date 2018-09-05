@@ -1,23 +1,26 @@
 {
     "name": "maildir-scan",
-    "version": "1.1.0",
+    "version": "2.0.0",
     "description": "Scan maildir folder and output a list of messages",
     "main": "lib/maildir-scan.js",
     "scripts": {
         "test": "grunt"
     },
-    "keywords": ["maildir"],
+    "keywords": [
+        "maildir"
+    ],
     "author": "Andris Reinman",
-    "license": "ISC",
+    "license": "EUPL-1.1+",
     "devDependencies": {
-        "eslint-config-nodemailer": "^1.2.0",
-        "grunt": "^1.0.1",
-        "grunt-cli": "^1.2.0",
-        "grunt-eslint": "^20.1.0"
+        "eslint-config-nodemailer": "1.2.0",
+        "eslint-config-prettier": "^3.0.1",
+        "grunt": "1.0.3",
+        "grunt-cli": "1.3.1",
+        "grunt-contrib-nodeunit": "2.0.0",
+        "grunt-eslint": "21.0.0"
     },
     "dependencies": {
-        "grunt-contrib-nodeunit": "^1.0.0",
-        "mailparser": "^2.0.5",
-        "utf7": "^1.0.2"
+        "mailparser": "2.3.4",
+        "utf7": "1.0.2"
     }
 }

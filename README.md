@@ -11,11 +11,11 @@ Finds messages from Maildir. Output is an array of folder objects that include a
 ```javascript
 const MaildirScan = require('maildir-scan');
 let scanner = new MaildirScan();
-scanner.scan('/path/to/Maildir', (err, list)=>{
+scanner.scan('/path/to/Maildir', (err, list) => {
     console.log(err || list);
 });
 ```
 
 ## License
 
-**ISC**
+**EUPL-1.1 or later**
