@@ -158,6 +158,13 @@ module.exports.scan = test => {
                 ]
             },
             {
+                folder: ['Drafts'],
+                name: '.Drafts',
+                path: '.Drafts',
+                messages: [],
+                specialUse: '\\Drafts'
+            },
+            {
                 folder: ['Rämpspost', 'Tähtis'],
                 name: '.R&AOQ-mpspost.T&AOQ-htis',
                 path: '.R&AOQ-mpspost.T&AOQ-htis',
@@ -187,6 +194,26 @@ module.exports.scan = test => {
                         flags: ['\\Draft', '\\Flagged', '\\Seen', 'jupi', 'kupi', 'mupi']
                     }
                 ]
+            },
+            {
+                folder: ['Sent'],
+                name: '.Sent',
+                path: '.Sent',
+                messages: [],
+                specialUse: '\\Sent'
+            },
+            {
+                folder: ['Templates'],
+                name: '.Templates',
+                path: '.Templates',
+                messages: []
+            },
+            {
+                folder: ['Trash'],
+                name: '.Trash',
+                path: '.Trash',
+                messages: [],
+                specialUse: '\\Trash'
             }
         ]);
         test.done();

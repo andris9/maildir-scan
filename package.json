@@ -1,6 +1,6 @@
 {
     "name": "maildir-scan",
-    "version": "2.1.0",
+    "version": "2.1.1",
     "description": "Scan maildir folder and output a list of messages",
     "main": "lib/maildir-scan.js",
     "scripts": {
