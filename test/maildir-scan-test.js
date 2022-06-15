@@ -27,8 +27,7 @@ module.exports.recursiveFolderScan = test => {
                             { name: ':list', path: '.R&AOQ-mpspost.T&AOQ-htis/courierimapkeywords/:list', file: true },
                             {
                                 name: '.5017661.1505297645.M902486P6469V000000000000FC00I0000000000043284_2.ubuntu,S=7',
-                                path:
-                                    '.R&AOQ-mpspost.T&AOQ-htis/courierimapkeywords/.5017661.1505297645.M902486P6469V000000000000FC00I0000000000043284_2.ubuntu,S=7',
+                                path: '.R&AOQ-mpspost.T&AOQ-htis/courierimapkeywords/.5017661.1505297645.M902486P6469V000000000000FC00I0000000000043284_2.ubuntu,S=7',
                                 file: true
                             },
                             {
