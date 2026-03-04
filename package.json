@@ -20,7 +20,7 @@
         "grunt-eslint": "24.0.0"
     },
     "dependencies": {
-        "mailparser": "3.5.0",
+        "mailparser": "3.9.3",
         "utf7": "1.0.2"
     }
 }
